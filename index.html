@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Information</title>
+</head>
+<body>
+  <h1>Browser Information</h1>
+  <ul id="browser-info">
+    <li><strong>Code Name:</strong> <span id="codeName"></span></li>
+    <li><strong>Name:</strong> <span id="name"></span></li>
+    <li><strong>Version:</strong> <span id="version"></span></li>
+    <li><strong>Cookies Enabled:</strong> <span id="cookiesEnabled"></span></li>
+    <li><strong>Geolocation:</strong> <span id="geolocation"></span></li>
+    <li><strong>Language:</strong> <span id="language"></span></li>
+    <li><strong>Online:</strong> <span id="online"></span></li>
+    <li><strong>Platform:</strong> <span id="platform"></span></li>
+    <li><strong>Product:</strong> <span id="product"></span></li>
+    <li><strong>User Agent:</strong> <span id="userAgent"></span></li>
+  </ul>
+
+  <script>
+    document.getElementById("codeName").innerText = navigator.appCodeName;
+    document.getElementById("name").innerText = navigator.appName;
+    document.getElementById("version").innerText = navigator.appVersion;
+    document.getElementById("cookiesEnabled").innerText = navigator.cookieEnabled ? 'Yes' : 'No';
+    document.getElementById("geolocation").innerText = navigator.geolocation ? 'Available' : 'Not available';
+    document.getElementById("language").innerText = navigator.language;
+    document.getElementById("online").innerText = navigator.onLine ? 'Yes' : 'No';
+    document.getElementById("platform").innerText = navigator.platform;
+    document.getElementById("product").innerText = navigator.product;
+    document.getElementById("userAgent").innerText = navigator.userAgent;
+  </script>
+</body>
+</html>
